@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\abduvohid\\Desktop\\C#\\practice-for-rest-api\\practice-for-rest-api.csproj": {}
+    "C:\\Users\\abduvohid\\Desktop\\C#\\PracticeForRestApi\\practice-for-rest-api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\abduvohid\\Desktop\\C#\\practice-for-rest-api\\practice-for-rest-api.csproj": {
+    "C:\\Users\\abduvohid\\Desktop\\C#\\PracticeForRestApi\\practice-for-rest-api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\abduvohid\\Desktop\\C#\\practice-for-rest-api\\practice-for-rest-api.csproj",
+        "projectUniqueName": "C:\\Users\\abduvohid\\Desktop\\C#\\PracticeForRestApi\\practice-for-rest-api.csproj",
         "projectName": "practice-for-rest-api",
-        "projectPath": "C:\\Users\\abduvohid\\Desktop\\C#\\practice-for-rest-api\\practice-for-rest-api.csproj",
+        "projectPath": "C:\\Users\\abduvohid\\Desktop\\C#\\PracticeForRestApi\\practice-for-rest-api.csproj",
         "packagesPath": "C:\\Users\\abduvohid\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\abduvohid\\Desktop\\C#\\practice-for-rest-api\\obj\\",
+        "outputPath": "C:\\Users\\abduvohid\\Desktop\\C#\\PracticeForRestApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -53,6 +53,10 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[9.0.7, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[9.0.3, )"
             }
           },
           "imports": [

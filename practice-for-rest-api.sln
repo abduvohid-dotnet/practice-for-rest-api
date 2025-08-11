@@ -22,3 +22,4 @@ Global
 		SolutionGuid = {DB94BE06-10E4-4AB8-9FFA-D109B0A1F1E4}
 	EndGlobalSection
 EndGlobal
+curl https://raw.githubusercontent.com/github/gitignore/main/VisualStudio.gitignore -o .gitignore

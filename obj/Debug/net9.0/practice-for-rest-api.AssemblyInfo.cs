@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("practice-for-rest-api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+358b150f15371e21d95e7ae80156be55938d4f24")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e8b8c66bde10444fbfb269d82304c4105dc25156")]
 [assembly: System.Reflection.AssemblyProductAttribute("practice-for-rest-api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("practice-for-rest-api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
