@@ -1,0 +1,21 @@
+cat <<EOL > .gitignore
+## Build artifacts
+bin/
+obj/
+
+## User-specific files
+*.user
+*.suo
+.vs/
+
+## OS generated files
+.DS_Store
+Thumbs.db
+
+## Secrets
+secrets.json
+appsettings.Development.json
+
+## Others
+*.nupkg
+EOL
