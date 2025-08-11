@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "aw5B9gPTHcY=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\abduvohid\\Desktop\\C#\\practice-for-rest-api\\practice-for-rest-api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\abduvohid\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.7\\microsoft.aspnetcore.openapi.9.0.7.nupkg.sha512",
+    "C:\\Users\\abduvohid\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
