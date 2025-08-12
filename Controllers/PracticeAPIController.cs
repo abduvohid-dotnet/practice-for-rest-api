@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using PracticeForRestApi.Data;
@@ -12,9 +13,17 @@ namespace PracticeForRestApi.Controllers
     [ApiController]
     public class PracticeAPIController : ControllerBase
     {
+        private readonly ILogger<PracticeAPIController> _logger;
+
+        public PracticeAPIController(ILogger<PracticeAPIController> logger)
+        {
+            _logger = logger;
+        }
+
         [HttpGet]
         public ActionResult<IEnumerable<PracticeDTO>> GetPractices()
         {
+            _logger.LogInformation("Get all practices");
             return Ok(PracticeStore.practiceList);
         }
 
@@ -31,6 +40,7 @@ namespace PracticeForRestApi.Controllers
         {
             if (id == 0)
             {
+                _logger.LogError("Get Practice Error with Id", +id);
                 return BadRequest();
             }
             var practice = PracticeStore.practiceList.FirstOrDefault(u => u.Id == id);
@@ -105,5 +115,26 @@ namespace PracticeForRestApi.Controllers
             return NoContent();
         }
 
+
+        [HttpPatch("{id:int}", Name = "UpdatePartialPractice")]
+        public IActionResult UpdatePartialPractice(int id, JsonPatchDocument<PracticeDTO> patchDTO)
+        {
+            if (patchDTO == null || id == 0)
+            {
+                return BadRequest();
+            }
+
+            var practice = PracticeStore.practiceList.FirstOrDefault(u => u.Id == id);
+            if (practice == null)
+            {
+                return BadRequest();
+            }
+            patchDTO.ApplyTo(practice, ModelState);
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            return NoContent();
+        }
     }
 }
