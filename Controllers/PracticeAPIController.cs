@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using PracticeForRestApi.Data;
 using PracticeForRestApi.Models;
 using PracticeForRestApi.Models.Dto;
 
@@ -12,10 +13,13 @@ namespace PracticeForRestApi.Controllers
         [HttpGet]
         public IEnumerable<PracticeDTO> GetPractices()
         {
-            return new List<PracticeDTO>{
-            new PracticeDTO { Id = 1, Name = "Pool View" },
-            new PracticeDTO {Id = 2, Name = "Beach View" }
-            };
+            return PracticeStore.practiceList;
+        }
+
+        [HttpGet("id")]
+        public PracticeDTO GetPractice(int id)
+        {
+            return PracticeStore.practiceList.FirstOrDefault(u => u.Id == id);
         }
     }
 }
