@@ -19,3 +19,5 @@ appsettings.Development.json
 ## Others
 *.nupkg
 EOL
+
+.fake
